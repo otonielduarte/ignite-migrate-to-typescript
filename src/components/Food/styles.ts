@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+type ContainerProps = {
+  available: boolean,
+}
+
+export const Container = styled.div<ContainerProps>`
   background: #f0f0f5;
   border-radius: 8px;
 
@@ -25,7 +29,11 @@ export const Container = styled.div`
   }
 
   section.body {
-    padding: 30px;
+    padding: 3px 1.5rem;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
 
     h2 {
       color: #3d3d4d;
